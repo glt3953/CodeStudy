@@ -27,14 +27,14 @@
     int num = 0; //循环次数
     
     // 升序
-    for (NSUInteger i = 1; i < array.count; i++) {
+    for (NSUInteger i = 1; i <= array.count; i++) {
         for (NSUInteger j = array.count - 1; j >= i; j--) {
             if (array[j] < array[j - 1]) {
                 id m = array[j - 1];
                 array[j - 1] = array[j];
                 array[j] = m;
-//                [array exchangeObjectAtIndex:j withObjectAtIndex:i];
-                num++; //48次
+//                [array exchangeObjectAtIndex:j withObjectAtIndex:j - 1];
+                num++; //21次
             }
         }
     }
